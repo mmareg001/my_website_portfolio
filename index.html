@@ -3,117 +3,69 @@
 <body>
   <head>
      <title>Gloria's Website!</title>
+     <link rel="stylesheet" href = "style.css" />
   </head>
-  <header>
-    <h1>Hello World! I'm Gloria</h1>
-
-    <img 
-        width="400" height="600"
-        src="/images/headshot.png" alt="headshot"/></br>
-      <h2>Gloria Mmare</h2>
-      <h3>Aspiring Software Engineer | Web Developer | Tech Enthusiast | STEMinist </h3>
-      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7348441515234373632/">LinkedIn</a> |
-      <a href="https://github.com/mmareg001/PROJECTS">GitHub</a> 
-  </header>
-  <!-- navigation bar to put on the side -->
-  <nav>
-    <ul>
-      <li><a href="#aboutme">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact me</a></li>
-      <li><a href="#Game">Game</a></li>
-    </ul>
-  </nav>
+    <!-- navigation bar to put on the side -->
  
-  <main>
-    <header>
-      <section id="About me">
-        <h2>About Me</h2>
-        <p>I'm an aspiring software engineer with a passion for web development and technology. I love creating innovative solutions and exploring new technologies. I love food and tryong out different cuisines and new recipes</p>
-        <a href="#">Read more about me</a>
-      </section>
+  <header class = "introduction">
+    <h1 style=" text-align: center; font-size: 30px;">Hello World! I'm Gloria</h1>
+    <!-- add a favicon here -->
 
-      <section id="Education">
-        <h2>Education</h2>
-        <ul>
-          <h4><strong> Bachelors of Science in Computer Science with Artificial Intelligence</strong></h4>
-          <ul>
-            <li>Coventry University, England, United Kingdom</li>
-            <li>Graduation Date: July 2027</li>
-            <li>Relevant Coursework: Data Structures, Algorithms, Data Science, Artifivial Intelligence, Operating Sydtems, Networks and Security</li>
-          </ul>
-        </ul>
-      </section>
-
-      <section id="Experience">
-        <h2>Experience</h2>
-        <ul>
-          <h4><strong>IT Systems Analyst | Placement</strong></h4>
-          <ul>
-            <li>Company Name: Caterpillar Inc</li>
-            <li>Duration: July 2025 - Present</li>
-            <li>Responsibilities: Assisted in developing web applications, collaborated with the development team, and participated in code reviews.</li>
-          </ul>
-        </ul>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <!-- should be able to hover around the page and  -->
-        <ul>
-          <li><strong>Project 1:</strong> </li>
-          <ul>
-            <li>Technologies Used: </li>
-            <li>Description: </li>
-            <a href="#">GitHub Link</a>
-          </ul>
-          <li><strong>Project 2:</strong> </li>
-          <ul>
-            <li>Technologies Used: </li>
-            <li>Description: </li>
-            <a href="#">GitHub Link</a>
-          </ul>
-          <li><strong>Project 3:</strong> </li>
-           <ul>
-            <li>Technologies Used: </li>
-            <li>Description: </li>
-            <a href="#">GitHub Link</a>
-        </ul>
-      </section>
-
-      <!-- The game will be two truths and 1 lie -->
-      <section id="Game">
-        <h2>Game</h2>
-        <p>Wanna play a little game to get to know me? Two truths and 1 lie</p>
-        <a href="/game.html">Click here to play!</a>
-      </section>
-
-      <!-- This will be put on the side -->
-      <aside>
-        <h2>Skills</h2>
-        <ul>
-          <li>Programming Languages: Python, C++, SQL, JavaScript, HTML, CSS</li>
-          <li>Web Development: React, Node.js, Express.js</li>
-          <li>Databases: MySQL, MongoDB</li>
-          <li>Tools: Git, Docker, AWS</li>
-        </ul>
-
-        <aside>
-          <h2>Monthly reads</h2>
-          <ul>
-            <li>Insert a new book and review</li>
-          </ul>
-        </aside>
-
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out via email at <a href="mailto:gmmare.official@gmail.com">my email address</a>
+    <!-- <style>
+      p {font-size: 20px; text-align: center;}
+      h2 {font-size: 30px; text-align: center;}
+    </style> -->
     </header>
-  </main>
+    <div class="image-container">
+      <img 
+        src="/images/headshot.png" alt="headshot"/></br>
+    </div>
+    
+      <h2 style="text-align: center;  text-transform: uppercase; letter-spacing: 2px;">Gloria Mmare</h2>
+      <h3 style="text-align: center;">Aspiring Software Engineer | Full Stack Developer | Tech Enthusiast | STEMinist </h3>
 
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/gloria-mmare-92b07a1b2/?skipRedirect=true" target="_blank" rel="social media">
+            <img src="/images/linkedin2.png" alt="linkedin Profile" class="linkedin">
+        </a>
+        <a href="https://github.com/mmareg001/PROJECTS" target="_blank" rel="github">
+            <img src="/images/github.png" alt="github" class="github">
+        </a>
+</div>
+       
 
+ 
+<div class = "main-container">
 
+    <nav class = "main-nav">
+  <div class="navdiv">
+  <ul>
+      <li><a href="/about_me.html">About Me</a></li>
+      <li><a href="/experience.html">Experience</a></li>
+      <li><a href="/projects.html">Projects</a></li>
+      <li><a href ="/community.html">Community Service</a></li>
+      <li><a href="/contact.html">Contact me</a></li>
+      
+    </ul>
 
+    </div>
+  
+  </nav>
+   <main class = "main-content">
+      
+  
+         <h2 class="about-me-heading">About Me</h2>
+         <div class="about-me-text">
+          <p>Hello there! Welcome to my little corner of the internet. My name is Gloria, I am an aspiring software engineer.  I am currently a student at Coventry University studying Computer Science with Artificial Intelligence, expected to graduate in 2027 with a First Class Honors. I love creating innovative solutions and exploring new technologies. I enjoy the intellectual challenges that software engineering offers; the process of analyzing 
+complex problems, debugging, and developing functional solutions excites me.
+My current focus is on full-stack development, as I am keen to understand and build complete, end-to-end applications
+that provide a seamless user experience. Please feel free to look around my website and <a href="/contact.html">reach out to me</a> if you would like us to collaborate. 
+</p>
+        <a href="/about_me.html">Read more about me</a>
+         </div>
+   </main>
 
+</div>
 
 
 </body>
