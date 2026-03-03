@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>My Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
 <body>
 <header>
-<h1 style="text-align: center;">Projects</h1>
+  <div id ="navdiv"></div>
 </header>
 
-<p>I am proficient in the following languages</p>
-<!-- create a round box of all skills i -->
-<ul>
-  <li>Python</li>
-</ul>
-
-<p>Here is a list of all my projects</p>
+<main class = "main-content">
+<h1>My Projects</h1>
+<p>Using some of technologies above, I have created the following projects</p>
 
     <!-- This will be put on the side -->
-      <section id = "Skills">
+      <!-- <section id = "Skills">
         <h2>Skills</h2>
         <p>I possess a combination of both technical expertise and soft skills which I believe make me the perfect candidate</p>
         <ul>
@@ -32,12 +34,46 @@
             <li>Adaptability and Flexinility</li>
             <li>Willngness to Learn</li>
           </ul>
-        </ul>
+        </ul> -->
 
 
-      <section id="projects">
-        <h2>Projects</h2>
+      <div class="projects-container">
         <!-- should be able to hover around the page and  -->
+         <div class = project1>
+          <h3>Red Robbin Smart Security System</h3>
+          <img src ="/images/project1.png"> in seart image of the project
+          <p>For a group project, we designed a...</p>
+          <p>Technologies uses: Python, MQTT, SQL</p>
+          <div>
+            <a href = >github</a>
+          </div>
+         </div>
+         
+         <div class = "project2">
+          <h3>Komodo Hub</h3>
+          <img>
+          <p>This was a group project for the software enginnering module where we were given requirements</p>
+          <div>
+            <a href = >Here is the github link</a>
+          </div>
+         </div>
+
+         <div class = "project3">
+          <h3>Secret Auctiom</h3>
+          <img>
+          <p>This was a group project for the software enginnering module where we were given requirements</p>
+          <div>
+            <a href = >Here is the github link</a>
+          </div>
+         </div>
+         
+
+
+
+
+
+          
+         </div>
         <ul>
           <li><strong>Project 1:</strong> </li>
           <ul>
@@ -57,7 +93,16 @@
             <li>Description: </li>
             <a href="#">GitHub Link</a>
         </ul>
-      </section>
 
+      </div>
+      </main>
 
-</body>
+         <script>
+        $(function(){
+            $("#navdiv").load("navbar.html");
+        });
+    </script>
+  
+      </body>
+
+</html>

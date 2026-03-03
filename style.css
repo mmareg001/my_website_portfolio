@@ -1,11 +1,5 @@
 
-body {
-  background-color: #FAF8F0;
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  color: #333
-  
-}
+
 /* .introduction {background-color: #948888;}  */
 
 /* Style the main navigation container */
@@ -15,7 +9,15 @@ body {
   justify-content: center;
   width: 100%; */
   
+  html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
 
+.section {
+  scroll-snap-align: start;
+  padding-top: 100px; /* prevents navbar overlap */
+}
 
 /* put navigation bar on the top right of page
 .main-nav {
@@ -24,9 +26,21 @@ body {
   top: 0;
   right: 0;
   z-index: 1000; */
+  #introduction {
+  height: 70vh;       /* full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertically centered */
+  align-items: center;      /* horizontally centered */
+  text-align: center;
+}
+
 .main-container {
-    display: flex;
-    min-height: 100vh;
+    
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+
 }
 
 @media (max-width: 768px) {
@@ -44,29 +58,46 @@ body {
 
     /* --- Step 2: Remove the margin from the main content --- */
     .main-content {
-        margin-left: 0; /* This is the KEY to stopping the overlap! */
+     /* This is the KEY to stopping the overlap! */
         padding: 20px;  /* Adjust padding for smaller screens */
     }
 
-    .introduction {
+
+
+    
+    .subintro {
+       width: 100%;        /* Make it span the full width */
+      height: auto;  
+      margin-left: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+      .tech-stack-container {
       margin-left: 0;
       padding: 20px;
     }
 
+    
 }
 
 .main-nav {
-  width: 200px;
-  background-color: #a92a2a;
+  width: 100%;
+  height: auto;
+  background-color: #562975;
   /* font-family: 'Times New Roman', Times, serif; */
   /* padding-left: 10px;
   padding-right: 20px; */
   color: white;
-  padding: 24px;
-  height: 100vh;
-  position:fixed;
+  padding: 16px 24px;
+  position: fixed;
   top: 0; 
   left: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* right: 0; */
 
   /* flex-shrink: 0; Prevents the sidebar from shrinking */
@@ -81,6 +112,9 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  gap: 24px;
   
   /* Use Flexbox to make the list items horizontal instead of vertical*/
   /* display: block;
@@ -92,7 +126,7 @@ body {
 
 /* Style the list items and the links inside them */
 .main-nav ul li{
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 
@@ -105,16 +139,13 @@ body {
   /* Set the font and color */
   font-family: calibri, sans-serif; /* Use a font that matches the style */
   color: white; /* Charcoal color from the style guide */
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 500 bold;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 600;
   letter-spacing: 0.05em;
   transition: background-color 0.2s ease-in-out;
-  display: block;
-  align-items: left;
-  justify-content: left;
-  padding: 12px, 0;
-  gap: 20px;
+  padding: 82px, 0;
+  
   /* margin-right: 30px; */
   /* border: 2px dashed black; */
   
@@ -129,14 +160,17 @@ body {
   color: red; /* Darken the color on hover */
 }
 
+body {
+  background-color: #f9f0fa;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  margin-top: 80px;
+  
+}
 /* body {
   padding-top: 50px; /* Adjust this value to the height of your navigation bar */
 
-.main-content {
-  flex-grow: 1;
-  padding: 40px;
-  margin-left: 240px
-}
+
 
 
 /* .introduction {text-align: center; line-height: 0.5;} */
@@ -189,33 +223,211 @@ img {
     opacity: 0.8
 }
 
+.about-section {
+  width: 100%;
+  padding: 64px 0;
+  scroll-margin-top: 80px;
+}
+
+.about-section.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .about-me-heading  {
   /* This centers the menu on the page */
   
-  text-align: left;
-  font-size: 24px;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+ text-align: left;
+  padding: 0 20px;
+margin-bottom: 20px;
+font-weight: 700;
+font-size: 32px;
  
 
 }
 
 .about-me-text {
   /* max-width: 1000px;  */
-  margin: 0 auto; 
-  text-align: left; /* Keep the text aligned to the left for readability */
+ /* Keep the text aligned to the left for readability */
    
+  max-width: none;
+  width: 100%;
+  padding: 0 40px;
+  text-align: left;
+
 }
 
 .about-me-text p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
-    text-align: left;
+    
+    
 }
 
-/* applies to all elements in CSS */
-/* * {
+
+
+.tech-stack-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.ts-text{
+  max-width: none;
+  width: 100%;
+  padding: 0 40px;
+  text-align: left;
+}
+
+.skills-list {
+   
+    
+    align-items: left;
+    gap: 5px; /* Space between badges */
+    padding-top: 10px;
+    margin: 15px 0;
+
+      display: grid;
+  /* This next line is the magic part: it creates 4 equal-width columns */
+  grid-template-columns: repeat(4, 1fr);
+  
+  /* This adds a nice space between all the logos */
+  
+  
+  /* Optional: Center the whole grid if it doesn't take up the full page width */
+  width: 80%;
+ 
+}
+
+.skils-list a{
+  text-decoration: none;
+}
+
+
+.skill-badge {
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: inline-flex;
+    align-items: center; /* This is key to vertically aligning the image and text */
+    gap: 8px; /* This creates the space between the image and the text */
+}
+
+/* --- NEW: Style for the images inside the badges --- */
+.marquee_item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+
+.experience-heading  {
   text-align: center;
-} */
+  font-size: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.experience-text {
+  /* max-width: 1000px;  */
+  margin: 0 auto; 
+  text-align: center; /* Keep the text aligned to the left for readability */
+   
+}
+
+.experience-text li {
+    font-size: 16px;
+    text-align: center;
+}
+
+.project1 {
+  background-color: blueviolet;
+  box-shadow: 0;
+  padding: 10px;
+  border-radius: 25%;
+}
+
+.project1 h3 {
+  font-size: 20px;
+  color: white;
+  margin: 0 auto;
+}
+
+.project1 p {
+  font-size: 10px;
+  color: white;
+  margin: 0 auto;
+}
+
+.project1 img{
+  width: 100%
+}
+
+
+
+/* Container: hides overflow and adds a subtle edge fade (optional) */
+.marquee {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  /* Optional edge fade to mask pop-in/out */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+          mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Track: two copies of content aligned in a row */
+.marquee_track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;          /* keep everything on one line */
+  gap: 30px;                    /* space between items/groups */
+  animation: marquee-scroll 12s linear infinite; /* adjust speed here */
+  will-change: transform;       /* perf hint */
+}
+
+/* Pause on hover */
+.marquee:hover .marquee_track {
+  animation-play-state: paused;
+}
+
+/* Each group of images (one "copy") */
+.marquee_item {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;           /* spacing between logos */
+  flex: 0 0 auto;      /* prevent shrink */
+  padding: 10px 0;
+}
+
+/* Logos */
+.marquee_item img {
+  height: 64px;        /* pick a consistent height */
+  width: auto;         /* keep aspect ratio */
+  object-fit: contain; /* neat fitting */
+  border-radius: 0;
+}
+
+/* Continuous right -> left scroll by moving half the track width */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 1000px) {
+  .marquee_track { gap: 40px; }
+  .marquee_item { gap: 40px; }
+
+  /* If you want circular thumbnails on mobile, use this; otherwise keep logos rectangular */
+  /* .marquee_item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  } */
+}
+
+
 
