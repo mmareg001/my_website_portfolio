@@ -1,64 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Gloria | Software Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-<header>
-<h1 style="text-align: center;">About me</h1>
-<h2>Get to know me</h2>
-</header>
-
-<p>I'm an aspiring software engineer with a passion for web development, artificial Intelligence and all things tech. I love creating innovative solutions and exploring new technologies. I love food and tryong out different cuisines and new recipes</p>
-
-  <!-- The game will be two truths and 1 lie -->
-<section id="Game">
-  <h2>Game</h2>
-  <p>Wanna play a little game to get to know me? Two truths and 1 lie</p>
-  <!-- <a href="/game.html">Click here to play!</a> -->
-</section>
-
-   <section id="Education">
-        <h2>Education</h2>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Gloria Mmare</a>
+      <nav class="main-nav">
         <ul>
-          <h4><strong> Bachelors of Science in Computer Science with Artificial Intelligence</strong></h4>
-          <ul>
-            <li>Coventry University, England, United Kingdom</li>
-            <li>Graduation Date: July 2027</li>
-            <li>Relevant Coursework: Data Structures, Algorithms, Data Science, Artifivial Intelligence, Operating Sydtems, Networks and Security</li>
-          </ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-      </section>
+      </nav>
+    </div>
+  </header>
 
-      
-      <section id = "Certifications">
-        <h2>Certifications</h2>
-        <p>For me learning never stops, I am always looking for new ways to enhance my skills and be current with industry demands</p>
-        <ul>
-          <ul>
-            <h3>Data Science and Artificial Intelligence | Women Techsters Fellowship Program | Tech4Dev</h3>
-            <li>Insert description about it</li>
-            <a href="link-to-certification">View Cerrtification Here</a>
-          </ul>
-          <ul>
-            <h3>Internship Experience | Finance, Professional Services and Consulting | Bright Network</h3>
-            <p>The world of finance has always been interesting to me. It offers endless oppotunities for software developers lke myself to</p>
-            <li>Insert Description</li>
-            <a href="link-to-certification">View Cerrtification Here</a>
-          </ul>
-           <ul>
-            <h3>Complete Full Stack Web Development Bootcamp - AI Integrated | Udemy</h3>
-            <p>This was a self taught skill that I decided to take on after discovering my interest in web development</p>
-            <li>Insert Description</li>
-            <a href="link-to-certification">View Cerrtification Here</a>
-          </ul>
-
+  <main class="container">
+    <section class="section">
+      <div class="section-title">About Me</div>
+      <p>
+        I am an aspiring software engineer in my final year pursuing a Bachelor of Science in Computer Science with Artificial Intelligence. 
+        I am passionate about backend development, artificial intelligence and machine learning. What excites me most is building practical systems that solve real-world problems. 
+        What draws me to software engineering is the opportunity to combine creativity, logic, and problem-solving to create impactful solutions.
+        </p>
+    </section>
+    <section class="section">
+      <div class="section-title">Education</div>
+      <div class="card">
+        <h3>Coventry University</h3>
+        <p class="meta">BSc Computer Science with Artificial Intelligence | Expected 2027</p>
+        <ul class="card-list">
+          <li>Relevant modules: Data Structures and Algorithms, Artificial Intelligence, Operating Systems, Security and Networks, Software Engineering</li>
         </ul>
-      </section>
+      </div>
+    </section>
+   <section class="section">
+      <div class="section-title">Tech Stack</div>
+      <p class="section-copy">I have a diverse range of skills that enable me to contribute efficiently to teams and build maintainable software.</p>
+      <ul class="card-list">
+        <li><strong>Programming Languages</strong> · Python · HTML · CSS · JavaScript · C++ · Java</li>
+        <li><strong>Frameworks</strong> · Django · React · Node.js · FastAPI · Spring Boot</li>
+        <li><strong>Databases</strong> · PostgreSQL · MySQL · MongoDB </li>
+        <li><strong>Tools & collaboration</strong> · Git · Docker · Agile teamwork</li>
+      </ul>
+    </section>
+    <section class="section">
+      <div class="section-title">Achievements</div>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Software Engineering Undergraduate of the Year Award Finalist 2026 </h3>
+          <p>Shortlisted as one of 9 finalists out of hundreds for this prestigious award recognizing outstanding talent in software engineering.</p>
+        </div>
+           <div class="card">
+          <h3>TCS Sustainathon Finalist 2025 </h3>
+          <p>Top 8 out of 80 teams for the TCS Sustainathon UK&I. Our project focused on creating a sustainable solution to measure the
+            environmental impact of AI within NatWest bank.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-title">Certifications & learning</div>
+      <div class="section-grid">
+        <div class="card">
+          <h3>Women Techsters Fellowship</h3>
+          <p>Focused on Data Science and AI with practical projects and mentorship.</p>
+        </div>
+        <div class="card">
+          <h3>Full Stack Web Development Bootcamp</h3>
+          <p>Completed a full-stack program with hands-on experience building web applications.</p>
+        </div>
+        <div class="card">
+          <h3>Bright Network Internship training</h3>
+          <p>Gained insights into professional services, consulting, and technology delivery.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-
+  <footer class="footer">
+    Ready for graduate roles in software engineering, AI, and product development.
+  </footer>
 </body>
-
-
-
-
-
 </html>

@@ -1,108 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Projects</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Gloria Mmare</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<header>
-  <div id ="navdiv"></div>
-</header>
-
-<main class = "main-content">
-<h1>My Projects</h1>
-<p>Using some of technologies above, I have created the following projects</p>
-
-    <!-- This will be put on the side -->
-      <!-- <section id = "Skills">
-        <h2>Skills</h2>
-        <p>I possess a combination of both technical expertise and soft skills which I believe make me the perfect candidate</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Gloria Mmare</a>
+      <nav class="main-nav">
         <ul>
-          <ul>
-            <h3>Technical Skills</h3>
-                <li>Programming Languages: Python, C++, SQL, JavaScript, HTML, CSS, Bash scripting, Assembly</li>
-                <li>Frameworks: Pandas, Flask, Scikit-Learn, React, Node.js, Express.js</li>
-                <li>Databases: MySQL, MongoDB</li>
-                <li>Tools: Git, Docker</li>
-          </ul>
-          <ul>
-            <h3>Soft skills</h3>
-            <li>Teamwork and Collaboration</li>
-            <li>Verbal and Written Communication</li>
-            <li>Adaptability and Flexinility</li>
-            <li>Willngness to Learn</li>
-          </ul>
-        </ul> -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about_me.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
 
-
-      <div class="projects-container">
-        <!-- should be able to hover around the page and  -->
-         <div class = project1>
-          <h3>Red Robbin Smart Security System</h3>
-          <img src ="/images/project1.png"> in seart image of the project
-          <p>For a group project, we designed a...</p>
-          <p>Technologies uses: Python, MQTT, SQL</p>
-          <div>
-            <a href = >github</a>
-          </div>
-         </div>
-         
-         <div class = "project2">
-          <h3>Komodo Hub</h3>
-          <img>
-          <p>This was a group project for the software enginnering module where we were given requirements</p>
-          <div>
-            <a href = >Here is the github link</a>
-          </div>
-         </div>
-
-         <div class = "project3">
-          <h3>Secret Auctiom</h3>
-          <img>
-          <p>This was a group project for the software enginnering module where we were given requirements</p>
-          <div>
-            <a href = >Here is the github link</a>
-          </div>
-         </div>
-         
-
-
-
-
-
-          
-         </div>
-        <ul>
-          <li><strong>Project 1:</strong> </li>
-          <ul>
-            <li>Technologies Used: </li>
-            <li>Description: </li>
-            <a href="#">GitHub Link</a>
-          </ul>
-          <li><strong>Project 2:</strong> </li>
-          <ul>
-            <li>Technologies Used: </li>
-            <li>Description: </li>
-            <a href="#">GitHub Link</a>
-          </ul>
-          <li><strong>Project 3:</strong> </li>
-           <ul>
-            <li>Technologies Used: </li>
-            <li>Description: </li>
-            <a href="#">GitHub Link</a>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
 
-      </div>
-      </main>
+  <main class="container">
+    <section class="section">
+      <div class="section-title">Projects</div>
+      <p class="section-copy">These examples highlight my approach to practical development, teamwork, and technical execution.</p>
+    </section>
 
-         <script>
-        $(function(){
-            $("#navdiv").load("navbar.html");
-        });
-    </script>
-  
-      </body>
+    <section class="project-grid">
+      <article class="project-card">
+        <div class="image-fallback"><img src="images/smart-security.png" alt="Project screenshot"></div>
+        <div class="project-card-content">
+          <h3>Red Robbin Smart Security System</h3>
+          <p> A smart secuity system that delivers reliable alerts and device management across a secure network, developed collaboratively in a university group project.</p>
+          <p> <strong>Tech Stack:</strong> Python, MQTT protocol, MySQL </p>
+          <a href="https://github.com/mmareg001/GMMCO-Project-Red-Robbin-Security" class="card-link">GitHub repository</a>
+        </div>
+      </article>
 
+      <article class="project-card">
+        <div class="image-fallback"><img src="images/komodo-hub-1.jpg" alt="Project screenshot"></div>
+        <div class="project-card-content">
+          <h3>Komodo Hub</h3>
+          <p>A mobile application for students and communities to report on endangered species, developed collaboratively in a university group project.</p>
+          <p> <strong>Tech Stack:</strong> Python, Kivy, MySQL </p>
+          <a href="https://github.com/mmareg001/SE-Group-Project" class="card-link">GitHub repository</a>
+        </div>
+      </article>
+
+          <article class="project-card">
+        <div class="image-fallback"><img src="images/task-engine.png" alt="Project screenshot"></div>
+        <div class="project-card-content">
+          <h3>Asynchronous Distributed Task Engine </h3>
+          <p>A high-throughput task distribution system that decouples heavy background jobs and streams real-time execution status to 
+            a frontend dashboard.</p>
+          <p> <strong>Tech Stack:</strong> Python, FastAPI, Redis, PostgreSQL, WebSocket, HTML/CSS </p>
+          <a href="https://github.com/mmareg001/asynchronous-distributed-task-engine" class="card-link">GitHub repository</a>
+        </div>
+      </article>
+
+         <article class="project-card">
+        <div class="image-fallback"><img src="images/pomodoro.png" alt="Project screenshot"></div>
+        <div class="project-card-content">
+          <h3>Pomodoro Timer</h3>
+          <p> A timer application to help manage time effectively during study sessions using the Pomodoro technique.</p>
+          <p> <strong>Tech Stack:</strong> Python, Tkinter </p>
+          <a href="https://github.com/mmareg001/pomodoro-timer" class="card-link">GitHub repository</a>
+        </div>
+      </article>
+
+         <article class="project-card">
+        <div class="image-fallback"><img src="images/snake-game-1.png" alt="Project screenshot"></div>
+        <div class="project-card-content">
+          <h3>Snake Game</h3>
+          <p> A classic snake game implemented with smooth controls and score tracking.</p>
+          <p> <strong>Tech Stack:</strong> Python, Turtle</p>
+          <a href="https://github.com/mmareg001/snake-game" class="card-link">GitHub repository</a>
+        </div>
+      </article>
+
+         <article class="project-card">
+        <div class="image-fallback"><img src="images/ping-pong.jpg" alt="Project screenshot"></div>
+        <div class="project-card-content">
+          <h3>Ping Pong </h3>
+          <p>A classic ping pong game implemented with smooth controls and score tracking.</p>
+          <p> <strong>Tech Stack:</strong> Python, Turtle</p>
+          <a href="https://github.com/mmareg001/pong-game" class="card-link">GitHub repository</a>
+        </div>
+      </article>
+
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    Projects are built to demonstrate applied knowledge and real-world collaboration.
+  </footer>
+</body>
 </html>

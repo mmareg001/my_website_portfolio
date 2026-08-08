@@ -1,433 +1,488 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f3fb;
+  --surface: #ffffff;
+  --surface-strong: #f7f1ff;
+  --text: #1b1a24;
+  --muted: #5f5c70;
+  --accent: #6f40ff;
+  --accent-soft: #f0e8ff;
+  --border: #e8e2ef;
+  --shadow: 0 20px 45px rgba(72, 52, 145, 0.12);
+}
 
+* {
+  box-sizing: border-box;
+}
 
-/* .introduction {background-color: #948888;}  */
-
-/* Style the main navigation container */
-/* .main-nav {
-  /* This centers the menu on the page */
-  /* display: flex;
-  justify-content: center;
-  width: 100%; */
-  
-  html {
-  scroll-snap-type: y mandatory;
+html {
   scroll-behavior: smooth;
 }
 
-.section {
-  scroll-snap-align: start;
-  padding-top: 100px; /* prevents navbar overlap */
-}
-
-/* put navigation bar on the top right of page
-.main-nav {
-  /* This centers the menu on the page */
-  /* position:fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000; */
-  #introduction {
-  height: 70vh;       /* full screen height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* vertically centered */
-  align-items: center;      /* horizontally centered */
-  text-align: center;
-}
-
-.main-container {
-    
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-}
-
-@media (max-width: 768px) {
-
-    /* --- Step 1: Reposition the sidebar to be a top bar --- */
-    .navigation-bar {
-        position: static;   /* Un-fix it from the side of the page */
-        width: 100%;        /* Make it span the full width */
-        height: auto;       /* Let its height be determined by its content */
-        
-        /* Optional: Center the links for a better mobile look */
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    /* --- Step 2: Remove the margin from the main content --- */
-    .main-content {
-     /* This is the KEY to stopping the overlap! */
-        padding: 20px;  /* Adjust padding for smaller screens */
-    }
-
-
-
-    
-    .subintro {
-       width: 100%;        /* Make it span the full width */
-      height: auto;  
-      margin-left: 0;
-      padding: 20px;
-      text-align: center;
-    }
-
-      .tech-stack-container {
-      margin-left: 0;
-      padding: 20px;
-    }
-
-    
-}
-
-.main-nav {
-  width: 100%;
-  height: auto;
-  background-color: #562975;
-  /* font-family: 'Times New Roman', Times, serif; */
-  /* padding-left: 10px;
-  padding-right: 20px; */
-  color: white;
-  padding: 16px 24px;
-  position: fixed;
-  top: 0; 
-  left: 0;
-  z-index: 1000;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* right: 0; */
-
-  /* flex-shrink: 0; Prevents the sidebar from shrinking */
-
-  /* z-index: 1000; */
-}
-
-                            
-/* Style the unordered list */
-.main-nav ul {
-  /* Remove default list  bullet points */
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  gap: 24px;
-  
-  /* Use Flexbox to make the list items horizontal instead of vertical*/
-  /* display: block;
-  gap: 5px; */         
-}
-
-/* Style the list items and the links inside them */
-
-
-/* Style the list items and the links inside them */
-.main-nav ul li{
-  margin-bottom: 0;
-}
-
-
-
-
-.main-nav li a {
-  /* Remove the default underline from the links */
-  text-decoration: none;
-  
-  /* Set the font and color */
-  font-family: calibri, sans-serif; /* Use a font that matches the style */
-  color: white; /* Charcoal color from the style guide */
-  text-transform: capitalize;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  transition: background-color 0.2s ease-in-out;
-  padding: 82px, 0;
-  
-  /* margin-right: 30px; */
-  /* border: 2px dashed black; */
-  
-  /* Add padding for spacing and a clickable area */
-
-
-}
-
-
-/* Add a hover effect for a better user experience */
-.main-nav li a:hover {
-  color: red; /* Darken the color on hover */
+html,
+body {
+  min-height: 100%;
 }
 
 body {
-  background-color: #f9f0fa;
-  font-family: 'Inter', sans-serif;
-  color: #333;
-  margin-top: 80px;
-  
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow: auto;
 }
-/* body {
-  padding-top: 50px; /* Adjust this value to the height of your navigation bar */
 
+body.homepage {
+  overflow: hidden;
+}
 
-
-
-/* .introduction {text-align: center; line-height: 0.5;} */
-.socials {text-align: center; height: 8vh; line-height: 0.7;}
-
-/* p {font-size: 20px; text-align: center;} 
-/* This sets font soze tp 20px for all paragraphs */
-/* h2 {font-size: 30px; text-align: center;} */
-
-
-.image-container {
-  display: flex;
-  justify-content: center; /* This centers the image horizontally */
-  align-items: center; /* This centers the image vertically */
-  margin-top: 20px;
-  /* height: 30vh; Optional: This makes the container take up the full viewport height to center the image on the page. */
+body.homepage main {
+  height: calc(100vh - 92px);
 }
 
 img {
-  width: 200px; /* Set a specific width */
-  height: 200px; /* Set the same height as the width for a perfect circle */
-  border-radius: 50%; /* This is the key property for making it round */
-  object-fit: cover; /* This will prevent the image from stretching if its original aspect ratio isn't square. It will crop it to fit. */
-}
-/* header {background-color: #939089;} */
-
-.socials {
-  display: flex;
-  justify-content: center; /* This centers the image horizontally */
-  align-items: center; /* This centers the image vertically */
-  gap: 10px;
-  margin:15px 0;
+  max-width: 100%;
+  display: block;
 }
 
-.socials a{
-  text-decoration: none;
+a {
+  color: inherit;
 }
 
-.linkedin, .github {
-    width: 35px;
-    height: 35px;
-    transition: transform 0.3s ease;
-     border-radius: 0; /* Override the general img rule for socials */
-    /* margin: 0 10px; Use a larger value for visible spacing */
+button,
+input,
+textarea,
+a {
+  font: inherit;
 }
 
-
-.linkedin:hover, .github:hover {
-    transform: scale(1.2); /* Makes the logo slightly larger on hover */
-    opacity: 0.8
-}
-
-.about-section {
-  width: 100%;
-  padding: 64px 0;
-  scroll-margin-top: 80px;
-}
-
-.about-section.inner {
-  max-width: 1100px;
+.container {
+  width: min(1140px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 0 24px;
 }
 
-.about-me-heading  {
-  /* This centers the menu on the page */
-  
- text-align: left;
-  padding: 0 20px;
-margin-bottom: 20px;
-font-weight: 700;
-font-size: 32px;
- 
-
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247, 243, 251, 0.96);
+  border-bottom: 1px solid var(--border);
 }
 
-.about-me-text {
-  /* max-width: 1000px;  */
- /* Keep the text aligned to the left for readability */
-   
-  max-width: none;
-  width: 100%;
-  padding: 0 40px;
-  text-align: left;
-
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
-.about-me-text p {
-    font-size: 17px;
-    line-height: 1.6;
-    
-    
-}
-
-
-
-.tech-stack-container {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    
-}
-
-.ts-text{
-  max-width: none;
-  width: 100%;
-  padding: 0 40px;
-  text-align: left;
-}
-
-.skills-list {
-   
-    
-    align-items: left;
-    gap: 5px; /* Space between badges */
-    padding-top: 10px;
-    margin: 15px 0;
-
-      display: grid;
-  /* This next line is the magic part: it creates 4 equal-width columns */
-  grid-template-columns: repeat(4, 1fr);
-  
-  /* This adds a nice space between all the logos */
-  
-  
-  /* Optional: Center the whole grid if it doesn't take up the full page width */
-  width: 80%;
- 
-}
-
-.skils-list a{
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
   text-decoration: none;
+  color: var(--text);
 }
 
-
-.skill-badge {
-    padding: 8px 15px;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    font-size: 0.9em;
-    display: inline-flex;
-    align-items: center; /* This is key to vertically aligning the image and text */
-    gap: 8px; /* This creates the space between the image and the text */
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-/* --- NEW: Style for the images inside the badges --- */
-.marquee_item img {
-  width: 100px;
-  height: 100px;
+.main-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--accent);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 320px);
+  align-items: center;
+  gap: 2rem;
+  min-height: 100%;
+  padding: 2.5rem 0;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.hero-title {
+  margin: 1.25rem 0 1.3rem;
+  font-size: clamp(2.6rem, 4.6vw, 4.4rem);
+  line-height: 0.98;
+}
+
+.hero-description {
+  max-width: 58ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 18px 30px rgba(111, 64, 255, 0.18);
+}
+
+.button-primary:hover {
+  transform: translateY(-1px);
+  background: #5f32e6;
+}
+
+.button-secondary {
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.button-secondary:hover {
+  background: #f6f0ff;
+}
+
+.hero-image {
+  display: grid;
+  place-items: center;
+}
+
+.hero-image img {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  align-items: center;
+}
+
+.icon-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.icon-button {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 35px rgba(95, 64, 255, 0.12);
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease;
+}
+
+.icon-button img {
+  width: auto;
+  height: 22px;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
 
-
-.experience-heading  {
-  text-align: center;
-  font-size: 20px;
-  border-bottom: 2px solid #ddd;
+.icon-button:hover {
+  transform: translateY(-2px);
 }
 
-.experience-text {
-  /* max-width: 1000px;  */
-  margin: 0 auto; 
-  text-align: center; /* Keep the text aligned to the left for readability */
-   
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
 }
 
-.experience-text li {
-    font-size: 16px;
-    text-align: center;
+.socials a {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 35px rgba(95, 64, 255, 0.12);
+  transition: transform 0.2s ease;
 }
 
-.project1 {
-  background-color: blueviolet;
-  box-shadow: 0;
-  padding: 10px;
-  border-radius: 25%;
+.socials a:hover {
+  transform: translateY(-2px);
 }
 
-.project1 h3 {
-  font-size: 20px;
-  color: white;
-  margin: 0 auto;
+.socials img {
+  width: 24px;
+  height: 24px;
 }
 
-.project1 p {
-  font-size: 10px;
-  color: white;
-  margin: 0 auto;
+.section {
+  padding: 4rem 0;
 }
 
-.project1 img{
-  width: 100%
+.section-title {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  margin: 0 0 1rem;
 }
 
+.section-copy {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
 
+.section-grid {
+  display: grid;
+  gap: 1.5rem;
+}
 
-/* Container: hides overflow and adds a subtle edge fade (optional) */
-.marquee {
+.overview-grid,
+.project-grid,
+.experience-grid,
+.section-highlight {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.overview-grid {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+.card,
+.highlight-card,
+.project-card,
+.experience-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(20, 18, 48, 0.06);
+}
+
+.card {
+  padding: 1.75rem;
+}
+
+.card h3,
+.highlight-card h3,
+.project-card h3,
+.experience-card h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.15rem;
+}
+
+.card p,
+.highlight-card p,
+.project-card p,
+.experience-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card-list,
+.feature-list,
+.experience-card ul,
+.read-list {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.card-list li,
+.feature-list li,
+.experience-card li,
+.read-list li {
+  margin-bottom: 0.7rem;
+}
+
+.card-link,
+.project-card a,
+.highlight-card a {
+  margin-top: 1rem;
+  display: inline-flex;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card-link:hover,
+.project-card a:hover,
+.highlight-card a:hover {
+  text-decoration: underline;
+}
+
+.tech-stack {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 2rem;
+}
+
+.tech-stack ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+.tech-stack li {
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  background: #fbf6ff;
+  border: 1px solid #efe6ff;
+  color: var(--text);
+}
+
+.tech-stack li strong {
   display: block;
-  width: 100%;
+  margin-bottom: 0.55rem;
+}
+
+.project-grid {
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+}
+
+.project-card {
   overflow: hidden;
-  /* Optional edge fade to mask pop-in/out */
-  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-          mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Track: two copies of content aligned in a row */
-.marquee_track {
-  display: inline-flex;
+.project-card img,
+.project-card .image-fallback {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.project-card .image-fallback {
+  display: grid;
+  place-items: center;
+  background: #f5effc;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-card .project-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.project-card .project-card-content p {
+  margin: 0;
+}
+
+.experience-grid {
+  grid-template-columns: 1fr;
+}
+
+.experience-card {
+  padding: 1.75rem;
+}
+
+.experience-card .meta {
+  color: var(--accent);
+  margin-top: 0.2rem;
+  font-weight: 700;
+}
+
+.experience-card ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.cta-banner {
+  background: linear-gradient(135deg, rgba(111, 64, 255, 0.12), rgba(248, 243, 251, 1));
+  border: 1px solid rgba(111, 64, 255, 0.18);
+  border-radius: 28px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
   align-items: center;
-  white-space: nowrap;          /* keep everything on one line */
-  gap: 30px;                    /* space between items/groups */
-  animation: marquee-scroll 12s linear infinite; /* adjust speed here */
-  will-change: transform;       /* perf hint */
 }
 
-/* Pause on hover */
-.marquee:hover .marquee_track {
-  animation-play-state: paused;
+.footer {
+  padding: 2rem 0 3rem;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
 }
 
-/* Each group of images (one "copy") */
-.marquee_item {
-  display: inline-flex;
-  align-items: center;
-  gap: 30px;           /* spacing between logos */
-  flex: 0 0 auto;      /* prevent shrink */
-  padding: 10px 0;
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-grid,
+  .project-grid,
+  .section-highlight {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Logos */
-.marquee_item img {
-  height: 64px;        /* pick a consistent height */
-  width: auto;         /* keep aspect ratio */
-  object-fit: contain; /* neat fitting */
-  border-radius: 0;
+@media (max-width: 680px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav ul {
+    gap: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
 }
-
-/* Continuous right -> left scroll by moving half the track width */
-@keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-/* Responsive tweaks */
-@media (max-width: 1000px) {
-  .marquee_track { gap: 40px; }
-  .marquee_item { gap: 40px; }
-
-  /* If you want circular thumbnails on mobile, use this; otherwise keep logos rectangular */
-  /* .marquee_item img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-  } */
-}
-
-
-
