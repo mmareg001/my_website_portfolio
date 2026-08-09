@@ -5,7 +5,7 @@
   --surface-strong: #f7f1ff;
   --text: #1b1a24;
   --muted: #5f5c70;
-  --accent: #6f40ff;
+  --accent: #5D1869;
   --accent-soft: #f0e8ff;
   --border: #e8e2ef;
   --shadow: 0 20px 45px rgba(72, 52, 145, 0.12);
@@ -66,8 +66,9 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247, 243, 251, 0.96);
-  border-bottom: 1px solid var(--border);
+  background: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(126, 60, 137, 0.2);
 }
 
 .header-inner {
@@ -84,7 +85,7 @@ a {
   text-transform: uppercase;
   font-size: 0.95rem;
   text-decoration: none;
-  color: var(--text);
+  color: white;
 }
 
 .main-nav ul {
@@ -97,15 +98,16 @@ a {
 }
 
 .main-nav a {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible {
-  color: var(--accent);
+  color: white;
+  opacity: 1;
 }
 
 .hero {
