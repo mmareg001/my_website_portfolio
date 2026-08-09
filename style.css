@@ -650,6 +650,8 @@ a {
   .hero {
     grid-template-columns: 1fr;
     align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.25rem 0;
     text-align: center;
   }
 
@@ -667,7 +669,7 @@ a {
     object-fit: cover;
     border-radius: 50%;
     box-shadow: var(--shadow);
-    margin-bottom: 0;
+   
   }
 
   .hero-badge,
@@ -677,23 +679,11 @@ a {
     margin-right: auto;
   }
 
-  .hero-badge {
-    margin-top: 0;
-    margin-bottom: 0.08rem;
-  }
-
-  .hero-title {
-    margin: 0.12rem 0 0.25rem;
-  }
-
-  .hero-description {
-    margin: 0 0 0.12rem;
-  }
-
 
   .hero-actions {
     justify-content: center;
-    margin-top: 0.35rem;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
   }
 
   .hero-actions .button,
