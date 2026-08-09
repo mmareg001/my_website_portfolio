@@ -650,8 +650,8 @@ a {
   .hero {
     grid-template-columns: 1fr;
     align-items: flex-start;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
+    gap: 0.25rem;
+    padding: 0.25rem 0;
     text-align: center;
   }
 
@@ -679,9 +679,6 @@ a {
     margin-right: auto;
   }
 
-  .hero-badge {
-    margin-top: 0.25rem;
-  }
 
   .hero-actions {
     justify-content: center;
