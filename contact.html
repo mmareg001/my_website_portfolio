@@ -23,18 +23,63 @@
 
   <main class="container">
     <section class="section">
-      <div class="section-title">Contact</div>
-      <p class="section-copy">If you are looking for a graduate software engineer who can contribute to your team, I�d love to speak with you.</p>
+      <div class="section-title">Contact Me</div>
+      <p class="section-copy">Contact me if you like to connect.  I am always open to new opportunities and expanding my network.</p>
       <div class="card">
-        <h3>Reach out</h3>
-        <p>Email me at <a href="mailto:gloria@example.com">gloria@example.com</a></p>
-        <p>Connect on <a href="https://www.linkedin.com/in/gloria-mmare-92b07a1b2/?skipRedirect=true" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        <form class="contact-form" action="https://formsubmit.co/ajax/gloria.mmare@gmail.com" method="post">
+          <input type="hidden" name="_subject" value="Portfolio contact message" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required />
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="Subject" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="6" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    I am open to graduate roles, internships, and collaborative projects in software engineering.
-  </footer>
+
+
+  <script>
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+          },
+          body: formData,
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          const successMessage = document.createElement('div');
+          successMessage.className = 'form-success';
+          successMessage.textContent = 'Message sent successfully';
+          contactForm.parentElement.insertBefore(successMessage, contactForm);
+
+          setTimeout(() => {
+            successMessage.remove();
+          }, 5000);
+        } else {
+          alert('Sorry, something went wrong. Please try again.');
+        }
+      });
+    }
+  </script>
 </body>
 </html>

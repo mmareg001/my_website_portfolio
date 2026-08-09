@@ -265,6 +265,8 @@ a {
 .section-title {
   font-size: clamp(1.8rem, 2vw, 2.4rem);
   margin: 0 0 1rem;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .section-copy {
@@ -319,6 +321,63 @@ a {
 .experience-card p {
   margin: 0;
   color: var(--muted);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #fbf7ff;
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(111, 64, 255, 0.45);
+  box-shadow: 0 0 0 4px rgba(111, 64, 255, 0.08);
+}
+
+.contact-form button {
+  width: fit-content;
+  padding: 0.95rem 1.6rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 16px 30px rgba(111, 64, 255, 0.22);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-1px);
+  background: #5f32e6;
+}
+
+.form-success {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.2rem;
+  border-radius: 20px;
+  background: rgba(111, 64, 255, 0.12);
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .card-list,
