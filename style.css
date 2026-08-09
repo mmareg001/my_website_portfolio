@@ -135,6 +135,17 @@ a {
   line-height: 0.98;
 }
 
+.hero-title .cursor {
+  display: inline-block;
+  margin-left: 0.22rem;
+  color: var(--accent);
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
 .hero-description {
   max-width: 58ch;
   margin: 0;
@@ -259,7 +270,7 @@ a {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 2.5rem 0;
 }
 
 .section-title {
@@ -449,6 +460,12 @@ a {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(111, 64, 255, 0.18);
 }
 
 .project-card img,
@@ -525,6 +542,15 @@ a {
   .section-highlight {
     grid-template-columns: 1fr;
   }
+
+  .tech-stack ul {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+
+  .cta-banner {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 680px) {
@@ -535,6 +561,8 @@ a {
 
   .main-nav ul {
     gap: 0.8rem;
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .hero-title {
@@ -543,5 +571,34 @@ a {
 
   .hero-actions {
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .icon-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .cta-banner {
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: flex-start;
   }
 }
