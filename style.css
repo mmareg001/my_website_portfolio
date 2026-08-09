@@ -650,7 +650,7 @@ a {
   .hero {
     grid-template-columns: 1fr;
     align-items: flex-start;
-    gap: 0.25rem;
+    gap: 0.125rem;
     padding: 0.25rem 0;
     text-align: center;
   }
@@ -677,6 +677,14 @@ a {
   .hero-title {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .hero-badge {
+    margin-top: 0;
+  }
+
+  .hero-title {
+    margin: 0.3rem 0 0.4rem;
   }
 
 
