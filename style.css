@@ -160,7 +160,7 @@ a {
   grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
   align-items: center;
   gap: 0;
-  min-height: 100%;*/
+  min-height: 100%;
   padding: 0.5rem 0;
 }
 
@@ -679,7 +679,6 @@ a {
    
   }
 
-  .hero-badge,
   .hero-description,
   .hero-title {
     margin-top: 0.5rem;
@@ -688,6 +687,12 @@ a {
     margin-right: auto;
   }
 
+  .hero-badge {
+  margin-top: -1.5rem; /* This negative value pulls the badge up toward the photo */
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
   .hero-actions {
     justify-content: center;
