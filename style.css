@@ -653,6 +653,7 @@ a {
 
   .hero {
     grid-template-columns: 1fr;
+    align-content: start;
     align-items: center;
     gap: 0rem;
     padding: 0.5rem 0;
