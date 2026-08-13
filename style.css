@@ -241,11 +241,16 @@ a {
 .hero-image {
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 
 .hero-image img {
   width: 280px;
+  height: 280px;
   max-width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 2rem;
   box-shadow: var(--shadow);
 }
