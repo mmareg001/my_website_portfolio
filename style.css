@@ -241,16 +241,11 @@ a {
 .hero-image {
   display: grid;
   place-items: center;
-  overflow: hidden;
 }
 
 .hero-image img {
   width: 280px;
-  height: 280px;
   max-width: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center top;
   border-radius: 2rem;
   box-shadow: var(--shadow);
 }
@@ -587,7 +582,7 @@ a {
 @media (max-width: 960px) {
   .hero {
     grid-template-columns: 1fr;
-    align-items: flex-start;
+    align-items: start;
     gap: 0;
     padding: 0.5rem 0;
     text-align: center;
@@ -658,7 +653,7 @@ a {
 
   .hero {
     grid-template-columns: 1fr;
-    align-items: flex-start;
+    align-items: start;
     gap: 0rem;
     padding: 0.5rem 0;
     text-align: center;
