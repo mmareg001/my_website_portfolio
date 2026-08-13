@@ -661,12 +661,9 @@ a {
 
   .hero-image {
     order: -1;
-    display: flex;
+    display: inline-grid;
     place-items: center;
     overflow: hidden;
-    justify-content: center;
-    margin-bottom: 0 !important;
-    padding: 0 !important;
   }
 
   .hero-image img {
@@ -675,14 +672,14 @@ a {
     max-width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: none;
+    box-shadow: var(--shadow);
+   
   }
 
   .hero-badge,
   .hero-description,
   .hero-title {
     margin-top: 0;
-    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
   }
