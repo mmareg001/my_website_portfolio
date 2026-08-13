@@ -672,7 +672,7 @@ a {
     max-width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: var(--shadow);
+    box-shadow: none;
    
   }
 
