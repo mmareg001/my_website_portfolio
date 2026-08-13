@@ -653,7 +653,7 @@ a {
 
   .hero {
     grid-template-columns: 1fr;
-    align-items: flex-start;
+    align-items: center;
     gap: 0rem;
     padding: 0.5rem 0;
     text-align: center;
@@ -661,9 +661,12 @@ a {
 
   .hero-image {
     order: -1;
-    display: inline-grid;
+    display: flex;
     place-items: center;
     overflow: hidden;
+    justify-content: center;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
   }
 
   .hero-image img {
@@ -672,14 +675,15 @@ a {
     max-width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: var(--shadow);
+    box-shadow: none;
    
   }
 
   .hero-badge,
   .hero-description,
   .hero-title {
-    margin-top: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     margin-left: auto;
     margin-right: auto;
   }
