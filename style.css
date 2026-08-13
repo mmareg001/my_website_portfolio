@@ -582,7 +582,7 @@ a {
 @media (max-width: 960px) {
   .hero {
     grid-template-columns: 1fr;
-    align-items: flex-start;
+    align-items: start;
     gap: 0;
     padding: 0.5rem 0;
     text-align: center;
@@ -653,7 +653,7 @@ a {
 
   .hero {
     grid-template-columns: 1fr;
-    align-items: flex-start;
+    align-items: start;
     gap: 0rem;
     padding: 0.5rem 0;
     text-align: center;
